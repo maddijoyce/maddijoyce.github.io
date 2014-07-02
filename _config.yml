@@ -1,0 +1,12 @@
+# Site settings
+title: Maddison Joyce - Software | Consulting | Training
+email: maddi@maddijoyce.com
+description: "Who am I? I'm Maddison Joyce. I've worked in all areas of software development and before that I was in tech support. I love writing code, learning new technologies, reading books and talking to people. I can help you with your next software project."
+baseurl: ""
+url: "http://maddijoyce.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude: ['config.codekit', 'bower_components', 'coffee', 'sass']
