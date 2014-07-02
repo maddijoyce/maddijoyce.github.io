@@ -45,6 +45,6 @@ setupUserVoice = ->
   window.UserVoice.push ['addTrigger', '#talk-training', {position: 'top'}]
 
 $(document).ready ->
-  setupFadeIn()
+  # setupFadeIn()
   setupAffix()
   setupUserVoice()
