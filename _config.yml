@@ -8,5 +8,9 @@ url: "http://maddijoyce.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+highlighter: pygments
 
 exclude: ['config.codekit', 'bower_components', 'coffee', 'sass']
+
+paginate: 5
+paginate_path: "blog/page:num"

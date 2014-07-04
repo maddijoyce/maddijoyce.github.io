@@ -1,0 +1,22 @@
+---
+layout: default
+current: blog
+---
+{% for post in paginator.posts %}
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="page-date">
+        {{ post.date | date: "<span class='month'>%b</span><span class='day'>%d</span><span class='year'>%Y</span>" }}
+      </div>
+      <div class="page-header">
+        <a href="{{ post.url }}"><h2 class="mj"><strong>{{ post.title }}</strong></h2></a>
+      </div>
+      {{ post.content }}
+    </div>
+  </div>
+{% endfor %}
+
+<ul class="pager">
+  <li class="previous {% unless paginator.previous_page %}disabled{% endunless %}"><a href="{{ paginator.previous_page_path }}">&larr; Older</a></li>
+  <li class="next {% unless paginator.next_page %}disabled{% endunless %}"><a href="{{ paginator.next_page_path }}">Newer &rarr;</a></li>
+</ul>

@@ -1,14 +1,18 @@
 affix = ->
-  height = $('.banner-main')[0].clientHeight
-  $('.navbar').removeData('bs.affix').removeClass('affix affix-top affix-bottom')
-  $('.navbar').affix({
-    offset: {
-      top: height
-    }
-  })
+  banner = $('.banner-main')
+  if banner.length
+    $('.navbar').removeData('bs.affix').removeClass('affix affix-top affix-bottom')
+    $('.navbar').affix({
+      offset: {
+        top: banner.outerHeight()
+      }
+    })
+  else
+    $('.navbar').addClass('affix affix-top')
+    $('body').css('padding-top', $('.navbar').outerHeight(true))
 setupAffix = ->
   $('.navbar').on 'affixed.bs.affix', ->
-    $('body').css('padding-top', $('.navbar')[0].clientHeight)
+    $('body').css('padding-top', $('.navbar').outerHeight(true))
   .on 'affixed-top.bs.affix', ->
     $('body').css('padding-top', 0)
   affix()
@@ -44,7 +48,11 @@ setupUserVoice = ->
   window.UserVoice.push ['addTrigger', '#talk-consulting', {}]
   window.UserVoice.push ['addTrigger', '#talk-training', {position: 'top'}]
 
+setupTooltips = ->
+  $('.tipped').tooltip()
+
 $(document).ready ->
   # setupFadeIn()
   setupAffix()
   setupUserVoice()
+  setupTooltips()

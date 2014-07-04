@@ -1,0 +1,43 @@
+---
+current: blog
+---
+
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="banner container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="page-date">
+                {{ page.date | date: "<span class='month'>%b</span><span class='day'>%d</span><span class='year'>%Y</span>" }}
+              </div>
+              <div class="page-header">
+                <h2 class="mj"><strong>{{ page.title }}</strong></h2>
+              </div>
+              {{ content }}
+              <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'maddijoyce'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+              <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
+        </div>
+        {% include sidebar.html %}
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

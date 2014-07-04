@@ -2,3 +2,4 @@
 
 // @codekit-prepend "../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"
 // @codekit-prepend "../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"
+// @codekit-prepend "../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"
