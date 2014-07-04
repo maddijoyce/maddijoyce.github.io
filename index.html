@@ -1,61 +1,90 @@
 ---
-layout: home
 current: about
 ---
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h3 class="mj">Custom Software Development</h3>
-    <p>
-      Ever had the feeling that there's a perfect software solution to your current work but you just don't have the know how to make it happen? You're not the first, and you certainly won't be the last. Don't just leave it there though. Together, we can turn your idea into a reality.
-    </p>
-    <p>
-      I specialise in rapid prototyping and development, with a focus on agile methodologies. What does that mean for you? It means that we work together, on a regular basis, to bring you the software you actually need. No lengthy specifications or long periods of 'development', instead we'll create a set of easy to manage deliverables with a process of constant communication and improvement.
-    </p>
-    <p>
-      This agile methodology means you get the software you really want and need, and the software works for you. With regular meetings and specific deliverables, you'll get to see the software as it's developed and we'll make sure it works as it should.
-    </p>
-    <p class="text-center">
-      <button id="talk-software" class="mj btn btn-lg btn-primary">
-        Interested in custom software? Let's Talk.
-      </button>
-    </p>
-  </div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h3 class="mj">IT &amp; Software Consultancy Services</h3>
-    <p>
-      IT &amp; Software can be confusing. There are endless decisions to make, and millions of possible answers to every question. If you need help getting the answers to these questions, I can help. With experience in every aspect of the software development cycle, including project management, business analysis, client meetings and development, I can help you find the right answers to the right questions.
-    </p>
-    <p>
-      I can also help you manage internal and external software and IT projects to get them finished on time and in budget. Managing a software project is about understanding the process from the start, and I can help you understand the various stages of any project.
-    </p>
-    <p>
-      Having worked with a number of Indian software development teams, I've got experience in the best ways to deal with an outsourced project. Whether you're working with individual developers, a software development company or even an overseas office, I can help you manage your processes to deliver a better and more efficient end result for all involved.
-    </p>
-    <p class="text-center">
-      <button id="talk-consulting" class="mj btn btn-lg btn-primary">
-        Interested in consulting services? Let's Talk.
-      </button>
-    </p>
-  </div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h3 class="mj">Employee &amp; Customer Training</h3>
-    <p>
-      If you've just transitioned to a new Operating System, platform, technology or software, you may have started noticing a drop in productivity from your staff or an increase in support calls from your customers. It's understandable, they're still learning and you need to give them time.
-    </p>
-    <p>
-      However, you can improve their learning speed with a customised training session. Small, interactive training sessions provide staff or customers with an opportunity to get to know the new software, learning it's ins and outs and spend time on improving their skills and understanding of that software.
-    </p>
-    <p>
-      Training sessions also provide an outlet for staff or customers to point out any problems or confusions they have with the software in a positive open environment. This gives you the opportunity to really get to know how well the software is being used and where you need to provide new or different options in the software itself and the training materials provided.
-    </p>
-    <p class="text-center">
-      <button id="talk-training" class="mj btn btn-lg btn-primary">
-        Interested in solutions training? Let's Talk.
-      </button>
-    </p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="banner banner-main text-center mj">
+      <h1 class="title">
+        <span class="text-primary">m</span>addison<br>
+        <span class="text-primary">j</span>oyce
+      </h1>
+      <h2 class="subtitle"><ul class="menu">
+        <li><a href="#software">software</a></li><!--
+        --><li><a href="#consulting">consulting</a></li><!--
+        --><li><a href="#training">training</a></li>
+      </ul></h2>
+    </div>
+    <a id="home"></a>
+    <a id="software"></a>
+    {% include header.html %}
+    <div class="banner container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h3 class="mj">Custom Software Development</h3>
+              <p>
+                Ever had the feeling that there's a perfect software solution to your current work but you just don't have the know how to make it happen? You're not the first, and you certainly won't be the last. Don't just leave it there though. Together, we can turn your idea into a reality.
+              </p>
+              <p>
+                I specialise in rapid prototyping and development, with a focus on agile methodologies. What does that mean for you? It means that we work together, on a regular basis, to bring you the software you actually need. No lengthy specifications or long periods of 'development', instead we'll create a set of easy to manage deliverables with a process of constant communication and improvement.
+              </p>
+              <p>
+                This agile methodology means you get the software you really want and need, and the software works for you. With regular meetings and specific deliverables, you'll get to see the software as it's developed and we'll make sure it works as it should.
+              </p>
+              <p class="text-center">
+                <button id="talk-software" class="mj btn btn-lg btn-primary">
+                  Interested in custom software? Let's Talk.
+                </button>
+                <a id="consulting"></a>
+              </p>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h3 class="mj">IT &amp; Software Consultancy Services</h3>
+              <p>
+                IT &amp; Software can be confusing. There are endless decisions to make, and millions of possible answers to every question. If you need help getting the answers to these questions, I can help. With experience in every aspect of the software development cycle, including project management, business analysis, client meetings and development, I can help you find the right answers to the right questions.
+              </p>
+              <p>
+                I can also help you manage internal and external software and IT projects to get them finished on time and in budget. Managing a software project is about understanding the process from the start, and I can help you understand the various stages of any project.
+              </p>
+              <p>
+                Having worked with a number of Indian software development teams, I've got experience in the best ways to deal with an outsourced project. Whether you're working with individual developers, a software development company or even an overseas office, I can help you manage your processes to deliver a better and more efficient end result for all involved.
+              </p>
+              <p class="text-center">
+                <button id="talk-consulting" class="mj btn btn-lg btn-primary">
+                  Interested in consulting services? Let's Talk.
+                </button>
+                <a id="training"></a>
+              </p>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h3 class="mj">Employee &amp; Customer Training</h3>
+              <p>
+                If you've just transitioned to a new Operating System, platform, technology or software, you may have started noticing a drop in productivity from your staff or an increase in support calls from your customers. It's understandable, they're still learning and you need to give them time.
+              </p>
+              <p>
+                However, you can improve their learning speed with a customised training session. Small, interactive training sessions provide staff or customers with an opportunity to get to know the new software, learning it's ins and outs and spend time on improving their skills and understanding of that software.
+              </p>
+              <p>
+                Training sessions also provide an outlet for staff or customers to point out any problems or confusions they have with the software in a positive open environment. This gives you the opportunity to really get to know how well the software is being used and where you need to provide new or different options in the software itself and the training materials provided.
+              </p>
+              <p class="text-center">
+                <button id="talk-training" class="mj btn btn-lg btn-primary">
+                  Interested in solutions training? Let's Talk.
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+        {% include sidebar.html %}
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

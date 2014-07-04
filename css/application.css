@@ -5322,6 +5322,12 @@ body {
 .title {
   margin-bottom: 60px; }
 
+.subtitle li a {
+  color: white; }
+  .subtitle li a:hover {
+    color: #028482;
+    text-decoration: none; }
+
 .menu {
   list-style: none;
   margin: 0;
