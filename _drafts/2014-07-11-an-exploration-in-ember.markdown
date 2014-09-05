@@ -54,7 +54,6 @@ The important aspects here are you must include the keywords 'ember-addon' and, 
     "momentjs": "~2.8.2"
   }
 }
-
 ```
 These files aren't specifically required, but I found I was using a lot of the same vendor code, so to manage dependencies, I pulled all of them back to the shared module and, to fit with ember's settings, set the bower directory to 'vendor'.
 
