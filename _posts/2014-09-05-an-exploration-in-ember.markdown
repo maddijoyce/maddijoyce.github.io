@@ -27,7 +27,7 @@ So, I followed a couple of tutorials and instructions but there was nothing that
 ### Step 1- Creating the Addon
 The easiest way to setup an addon is using NPM, which worried me until I realized private NPM packages exist and are easy to setup. So, I created my folder 'shared' and added a couple of files:
 #### package.json
-```json
+{% highlight json %}
 {
   "name": "shared-addon",
   "version": "0.0.1",
@@ -37,28 +37,28 @@ The easiest way to setup an addon is using NPM, which worried me until I realize
   "private": true,
   "devDependencies": {}
 }
-```
+{% endhighlight %}
 The important aspects here are you must include the keywords 'ember-addon' and, if you don't want to publish your code, set 'private'.
 
 #### .bowerrc
-```json
+{% highlight json %}
 {
   "directory": "vendor"
 }
-```
+{% endhighlight %}
 #### bower.json
-```json
+{% highlight json %}
 {
   "name": "shared-addon",
   "dependencies": {
     "momentjs": "~2.8.2"
   }
 }
-```
+{% endhighlight %}
 These files aren't specifically required, but I found I was using a lot of the same vendor code, so to manage dependencies, I pulled all of them back to the shared module and, to fit with ember's settings, set the bower directory to 'vendor'.
 
 #### index.js
-```javascript
+{% highlight javascript %}
 // This code from http://hashrocket.com/blog/posts/building-ember-addons
 var path = require('path');
 var fs   = require('fs');
@@ -92,7 +92,7 @@ Shared.prototype.included = function included(app) {
 };
 
 module.exports = Shared;
-```
+{% endhighlight %}
 And the Shared Addon is now setup.
 
 ### Step 2- Adding some shared files.
@@ -125,7 +125,7 @@ npm install ../shared
 
 ### One Last Caveat- Static Assets
 Ember static assets are dropped in the 'public' folder, but this folder isn't pulled across by ember addons. To combat that, I dropped my static files in an 'assets' folder in the addon and my 'brocfile.js' looks like this:
-```javascript
+{% highlight javascript %}
 var mergeTrees = require('broccoli-merge-trees');
 var pickFiles = require('broccoli-static-compiler');
 
@@ -143,5 +143,5 @@ var sharedImages = pickFiles('node_modules/shared-addon/assets/images', {
 })
 
 module.exports = mergeTrees([app.toTree(), sharedFonts, sharedImages]);
-```
+{% endhighlight %}
 It's a little messy, but it works and I can share my fonts and images between apps.
