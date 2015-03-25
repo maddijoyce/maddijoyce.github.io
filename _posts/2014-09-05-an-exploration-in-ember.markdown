@@ -21,11 +21,13 @@ Next I turned to Github, and had [an answer](https://github.com/stefanpenner/emb
 So, I followed a couple of tutorials and instructions but there was nothing that fit exactly what I was doing, so it was a bit of trial and error. Anyway, without further ado, this is how it went.
 
 ### My resources:
+
 * [Dockyard Blog Article](http://reefpoints.dockyard.com/2014/06/24/introducing_ember_cli_addons.html)
 * [HashRocket Blog Article](http://hashrocket.com/blog/posts/building-ember-addons)
 
 ### Step 1- Creating the Addon
 The easiest way to setup an addon is using NPM, which worried me until I realized private NPM packages exist and are easy to setup. So, I created my folder 'shared' and added a couple of files:
+
 #### package.json
 {% highlight json %}
 {
