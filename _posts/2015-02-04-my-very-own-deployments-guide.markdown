@@ -132,7 +132,7 @@ First we install rbenv and a bunch of dependencies:
 {% highlight bash %}
 sudo apt-get -y install git
 sudo curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
-sudo apt-get -y install zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev nodejs
+sudo apt-get -y install zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev nodejs libcurl3 libcurl4-openssl-dev
 {% endhighlight %}
 
 There's a step in there that rbenv will tell you to do, but I seem to forget it all the time. Edit ~/.bash_profile:
@@ -163,6 +163,8 @@ gem install bundler
 ### Step 5- Get Yourself A Unicorn
 
 It appears I got a little distracted here and forgot to update. This will be updated- soon, I hope.
+
+*Edit (2015-07-31): Ok, so it looks like this isn't getting updated. I'll guess we'll find out how to do it next time I have to setup a Ruby-Rails-Unicorn-Nginx-Mina stack. That's my bad.*
 
 ### Step 6- Get Yourself A Mina
 I've always used Capistrano as my deployment tool (other than the dark ages of FTP) but I really like the look of Mina, so I'm giving it a try.
