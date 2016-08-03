@@ -8,7 +8,7 @@ url: "http://maddijoyce.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
 
 exclude: ['config.codekit', 'bower_components', 'coffee', 'sass']
 
